@@ -1,5 +1,11 @@
 # GlobalHeightFunctions.jl
 
+[![In development documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://PenguinxCutCell.github.io/GlobalHeightFunctions.jl/dev)
+![CI](https://github.com/PenguinxCutCell/GlobalHeightFunctions.jl/actions/workflows/ci.yml/badge.svg)
+![Coverage](https://codecov.io/gh/PenguinxCutCell/GlobalHeightFunctions.jl/branch/main/graph/badge.svg)
+
+
+
 `GlobalHeightFunctions.jl` is a solver-agnostic toolbox for **global height-function** interface tracking.
 
 It has no dependency on `PenguinStefan.jl` and only provides geometry-level operators.
