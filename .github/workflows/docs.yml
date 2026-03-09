@@ -7,7 +7,7 @@ on:
     paths:
       - "docs/**"
       - "src/**"
-      - ".github/workflows/docs.yml"
+      - ".github/workflows/Docs.yml"
       - "*.toml"
   pull_request:
     branches: [main]
@@ -39,8 +39,9 @@ jobs:
         run: |
           julia --project=docs -e '
             using Pkg
-            Pkg.develop(PackageSpec(url="https://github.com/PenguinxCutCell/CartesianGrids.jl"))
-            Pkg.develop(PackageSpec(path=pwd()))
+            Pkg.develop([
+              PackageSpec(url="https://github.com/PenguinxCutCell/CartesianGrids.jl.git"),
+              PackageSpec(url="https://github.com/PenguinxCutCell/GlobalHeightFunctions.jl.git")]);
             Pkg.instantiate()'
 
       - name: Build and deploy docs
