@@ -25,6 +25,10 @@ For multi-valued interfaces along an axis, use a level-set representation instea
 
 ## Quick Example
 
+Start by defining a Cartesian grid and a height function `xf` that represents the interface as a single-valued graph along the `x`-axis.
+
+Then, convert this height function to a signed distance function (SDF) representation using `phi_from_xf`, and convert it back to a height function using `xf_from_sdf`.
+
 ```@example
 using CartesianGrids
 using GlobalHeightFunctions
